@@ -1,0 +1,30 @@
+.banner-fundo {
+    height: 80vh;
+    background-image: url('../../../public/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.texto h1 {
+    font-family: 'Poppins', sans-serif;
+    text-shadow:
+        0 0 5px #daa520,
+        0 0 10px #daa520,
+        0 0 20px #daa520,
+        0 0 40px #daa520,
+        0 0 80px #daa520,
+        0 0 90px #daa520,
+        0 0 100px #daa520;
+}
+
+
+.texto p {
+    font-family: 'Dancing Script', cursive;
+    color: #daa520;
+}
+
+.borda {
+    border: 2px solid red;
+}
