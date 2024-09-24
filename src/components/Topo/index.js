@@ -1,7 +1,7 @@
 import './topo.css'
 export default function Topo() {
     return (
-        <div className="banner-fundo container">
+        <div className="banner-fundo rounded-bottom-4 container">
             <div className="row h-100 justify-content-center align-items-center">
                 <div className="texto col-4 text-center text-white">
                     <h1>RESTAURANT</h1>

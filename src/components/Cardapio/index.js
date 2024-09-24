@@ -64,7 +64,7 @@ export default function Cardapio() {
                     counter++
                     return(
                         
-                    <div key={index} className={counter < 4 ? 'col my-3' : 'col-6 my-3'}>
+                    <div key={index} className={ verificar.length  === 1 ? 'col-12' : counter < 4 ? 'col my-3' : 'col-6 my-3'}>
                         <Card
                             imagem={produto.imagem}
                             nome={produto.nome}
