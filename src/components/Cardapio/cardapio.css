@@ -1,0 +1,12 @@
+.card-border{
+    border:2px solid gold
+}
+
+div h1{
+     font-family: 'Dancing Script', cursive;;
+     color: #daa520;
+}
+
+.cor-fundo{
+    background-color:rgba(243,243,243,255)
+}
