@@ -8,7 +8,7 @@ import bebidas from '../../imagens/bebidas.png'
 import saladas from '../../imagens/salada.png'
 import sobremesa from '../../imagens/sobremesa.png'
 import produtos from '../../dados/data-produtos'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 export default function Cardapio() {
     const [lista,setLista] = useState(produtos)
@@ -24,6 +24,10 @@ export default function Cardapio() {
         setLista(listaFiltrada)
         setCategoria(ctg)
     }
+
+    useEffect(() => {
+        filtrar('Entradas')
+    }, [])
 
     const verificar = inputValue.length <= 3 ? lista : lista.filter(item => item.nome.toLowerCase().includes(inputValue.toLowerCase()))
 
@@ -55,30 +59,41 @@ export default function Cardapio() {
             <div className='mt-4 text-center'>
                 <h1>Cardápio</h1>
             </div>
-            <div className='row row-cols-3 p-2 cor-fundo'>
+            <div className='row p-2 cor-fundo'>
             
-            {verificar.map((produto,index) => {
-                if(produto.categoria === categoria){
-                    
-                    console.log(index)
-                    counter++
-                    return(
-                        
-                    <div key={index} className={ verificar.length  === 1 ? 'col-12' : counter < 4 ? 'col my-3' : 'col-6 my-3'}>
-                        <Card
-                            imagem={produto.imagem}
-                            nome={produto.nome}
-                            categoria={produto.categoria}
-                            descricao={produto.descricao}
-                            preco={`R$ ${produto.preco.toFixed(2)}`} />
+                {verificar.map((produto, index) => {
+                    if (produto.categoria === categoria) {
+                        let myclass = ''
+                        counter++
 
-                    </div>
-                    
- 
-                )
-                }
-               
-            })}
+                        if (verificar.length === 1) {
+                            myclass = 'col-12 my-3'
+                        } else if(counter < 4) {
+                            myclass = 'col-12 col-md-6 col-lg-4 my-3'
+                        } else if(counter < 5) {
+                            myclass = 'col-12 col-md-6 my-3'
+                        } else {
+                            myclass = 'col my-3'
+                        }
+
+
+                        return (
+                            
+                            <div key={index} className={myclass}>
+                                <Card
+                                    imagem={produto.imagem}
+                                    nome={produto.nome}
+                                    categoria={produto.categoria}
+                                    descricao={produto.descricao}
+                                    preco={`R$ ${produto.preco.toFixed(2)}`} />
+
+                            </div>
+
+
+                        )
+                    }
+
+                })}
            </div>
         </div>
     )
