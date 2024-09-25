@@ -1,0 +1,23 @@
+.card-border{
+    border:2px solid gold
+}
+
+div h1{
+     font-family: 'Dancing Script', cursive;;
+     color: #daa520;
+}
+
+.cor-fundo{
+    background-color:rgba(243,243,243,255)
+}
+
+/* .estilo div:nth-child(5){
+width:100%
+}
+
+@media screen and(max-width:990px){
+    .estilo div:nth-child(5){
+        
+        width: 50% !important;
+    }
+} */
