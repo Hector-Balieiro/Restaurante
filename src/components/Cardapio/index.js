@@ -8,6 +8,7 @@ import bebidas from '../../imagens/bebidas.png'
 import saladas from '../../imagens/salada.png'
 import sobremesa from '../../imagens/sobremesa.png'
 import produtos from '../../dados/data-produtos'
+import Lupa from '../../imagens/lupa.png';
 import {useState} from 'react'
 
 export default function Cardapio() {
@@ -28,7 +29,7 @@ export default function Cardapio() {
     const verificar = inputValue.length <= 3 ? lista : lista.filter(item => item.nome.toLowerCase().includes(inputValue.toLowerCase()))
 
     return (
-        <div className="container mt-3">
+        <div className="container-lg mt-3 ">
             <div className="row justify-content-between">
                 <div className="col-lg-2 col-md-3 col-6 mb-md-0 mb-3">
                     <Button funcao={filtrar} nome="Entradas" imagem={entrada} />
@@ -49,13 +50,17 @@ export default function Cardapio() {
                     <Button funcao={filtrar} nome="Sobremesa" imagem= {sobremesa} />
                 </div>
             </div>
-            <div className="row col-12 m-auto mt-5">
-                <input className="rounded" placeholder='Pesquise aqui um dos pratos do nosso cardápio' type="text" value={inputValue} onChange={(e)=> setInputValue(e.target.value)}/>
+
+            <div className="input-group flex-nowrap mt-5">
+                <span className="input-group-text" id="addon-wrapping"><img src={Lupa} height={20} width={30}/></span>
+                <input className="rounded w-100" placeholder={`Pesquise aqui um dos pratos do nosso cardápio`} type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
             </div>
+
             <div className='mt-4 text-center'>
                 <h1>Cardápio</h1>
+               
             </div>
-            <div className='row row-cols-3 p-2 cor-fundo estilo'>
+            <div className='row row-cols-3 p-2 cor-fundo estilo mx-1 mx-lg-0 '>
             
             {verificar.map((produto,index) => {
                 if(produto.categoria === categoria){
