@@ -1,5 +1,5 @@
 import './cardapio.css';
-import Button from '../Buttons';
+import Botao from '../Botao/botao';
 import Card from '../Card';
 import entrada from '../../imagens/entrada.png'
 import massa from '../../imagens/massa.png'
@@ -19,9 +19,7 @@ export default function Cardapio() {
     let counter = 0
 
     function filtrar(ctg){
-        console.log(ctg)
         const listaFiltrada = produtos.filter((produto) => { return produto.categoria === ctg })
-        console.log(listaFiltrada)
         setLista(listaFiltrada)
         setCategoria(ctg)
     }
@@ -32,22 +30,22 @@ export default function Cardapio() {
         <div className="container-lg mt-3 ">
             <div className="row justify-content-between">
                 <div className="col-lg-2 col-md-3 col-6 mb-md-0 mb-3">
-                    <Button funcao={filtrar} nome="Entradas" imagem={entrada} />
+                    <Botao funcao={filtrar} nome="Entradas" imagem={entrada}/>
                 </div>
                 <div className="col-lg-2 col-md-3 col-6 mb-md-0 mb-3">
-                    <Button funcao={filtrar} nome="Massas" imagem={massa} />
+                    <Botao funcao={filtrar} nome="Massas" imagem={massa}/>
                 </div>
                 <div className="col-lg-2 col-md-3 col-6 ">
-                    <Button funcao={filtrar} nome="Carnes" imagem={carne} />
+                    <Botao funcao={filtrar} nome="Carnes" imagem={carne}/>
                 </div>
                 <div className="col-lg-2 col-md-3 col-6 ">
-                    <Button funcao={filtrar} nome="Bebidas" imagem={bebidas} />
+                    <Botao funcao={filtrar} nome="Bebidas" imagem={bebidas}/>
                 </div>
                 <div className="col-lg-2 col-6 mt-lg-0 mt-3">
-                    <Button funcao={filtrar} nome="Saladas" imagem={saladas} />
+                    <Botao funcao={filtrar} nome="Saladas" imagem={saladas}/>
                 </div>
                 <div className="col-lg-2 col-6 mt-lg-0 mt-3">
-                    <Button funcao={filtrar} nome="Sobremesa" imagem= {sobremesa} />
+                    <Botao funcao={filtrar} nome="Sobremesa" imagem= {sobremesa}/>
                 </div>
             </div>
 
