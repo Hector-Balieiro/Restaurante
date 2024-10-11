@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Restaurante.git/static/css/main.f642795c.css",
-    "main.js": "/Restaurante.git/static/js/main.5344a5ce.js",
+    "main.css": "/Restaurante.git/static/css/main.753d20a3.css",
+    "main.js": "/Restaurante.git/static/js/main.3e4b6554.js",
     "static/js/453.c2d21b9e.chunk.js": "/Restaurante.git/static/js/453.c2d21b9e.chunk.js",
     "static/media/mil-folhas.jpg": "/Restaurante.git/static/media/mil-folhas.7432211a0b7dfa608866.jpg",
     "static/media/file-mignon.jpg": "/Restaurante.git/static/media/file-mignon.7d06de8c3e6d2723728a.jpg",
@@ -37,12 +37,12 @@
     "static/media/carne.png": "/Restaurante.git/static/media/carne.e6196fe762cca1f2183d.png",
     "static/media/salada.png": "/Restaurante.git/static/media/salada.143ff9cee8e0ea0969e3.png",
     "index.html": "/Restaurante.git/index.html",
-    "main.f642795c.css.map": "/Restaurante.git/static/css/main.f642795c.css.map",
-    "main.5344a5ce.js.map": "/Restaurante.git/static/js/main.5344a5ce.js.map",
+    "main.753d20a3.css.map": "/Restaurante.git/static/css/main.753d20a3.css.map",
+    "main.3e4b6554.js.map": "/Restaurante.git/static/js/main.3e4b6554.js.map",
     "453.c2d21b9e.chunk.js.map": "/Restaurante.git/static/js/453.c2d21b9e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f642795c.css",
-    "static/js/main.5344a5ce.js"
+    "static/css/main.753d20a3.css",
+    "static/js/main.3e4b6554.js"
   ]
 }
